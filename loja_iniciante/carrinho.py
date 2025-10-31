@@ -25,14 +25,14 @@ class Carrinho:
         subtotal = 0
         total = 0
         for item, quantidade in self.itens:
-            subtotal = item.preco * quantidade
+            subtotal = item * quantidade
             total += subtotal
         return total
 
     def linhas_tabela(self):
         linhas = []
         for item, quantidade in self.itens:
-            subtotal = item.preco * quantidade
+            subtotal = item * quantidade
             linhas.append([item.nome, f"R$ {item.preco:.2f}", quantidade, f"R$ {subtotal:.2f}"])
         return linhas
     
